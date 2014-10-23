@@ -6,13 +6,12 @@ require('fs').readFileSync('./fortunes/freebsd/fortunes').toString()
              .split('%\n').forEach(function (fortune) {
   fortunes.push(fortune);
 })
-console.log(fortunes);
 
 app.get('/', function (req, res) {
   res.type('text/plain');
-  res.send('usage');
+  //res.send('usage');
+  res.send(fortunes[Math.floor(Math.random()*fortunes.length)]);
 })
-
 
 var server = app.listen(3000, function () {
 
