@@ -1,0 +1,14 @@
+{
+  "name": "faas",
+  "version": "1.0.0",
+  "description": "Fortune as a service",
+  "main": "faas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Rue",
+  "license": "BSD",
+  "dependencies": {
+    "express": "^4.9.8"
+  }
+}
