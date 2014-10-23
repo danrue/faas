@@ -9,7 +9,11 @@ require('fs').readFileSync('./fortunes/freebsd/fortunes').toString()
 
 app.get('/', function (req, res) {
   res.type('text/plain');
-  //res.send('usage');
+  res.send('usage');
+})
+
+app.get('/fortune', function (req, res) {
+  res.type('text/plain');
   res.send(fortunes[Math.floor(Math.random()*fortunes.length)]);
 })
 
